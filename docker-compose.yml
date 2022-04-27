@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  softplan.juros.calculojurosapi:
+    image: ${DOCKER_REGISTRY-}softplanjuroscalculojurosapi
+    build:
+      context: .
+      dockerfile: Softplan.Juros.CalculoJurosAPI/Dockerfile
+
+  softplan.juros.taxajurosapi:
+    image: ${DOCKER_REGISTRY-}softplanjurostaxajurosapi
+    build:
+      context: .
+      dockerfile: Softplan.Juros.TaxaJurosAPI/Dockerfile
+
